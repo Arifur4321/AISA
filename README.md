@@ -4,7 +4,7 @@ our AISA will scan nearby drone and decode all the opendroneid packets instantly
 
 
 Description of the program :
-->The AISA.py is themain python file  
+->The AISA.py is the main python file  
 The ODIDScanDelegate calss basically starts scanning all nearby bluetooth device .
 Opendroneid protocol broadcast packet comes with a 16b service data . and it starts
 with "faff" so There is a check that  if the value startswith("faff") then i use 
