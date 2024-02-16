@@ -168,7 +168,7 @@ def decode_service_data(service_data):
     height = height  # Assuming this is the height
 
     # Insert the data into the MySQL database
-    #insert_data_into_db(mac_address, latitude_degrees, longitude_degrees, altitude, height)
+    insert_data_into_db(mac_address, latitude_degrees, longitude_degrees, altitude, height)
 
 
 
