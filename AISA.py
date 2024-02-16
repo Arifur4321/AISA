@@ -75,15 +75,16 @@ def decode_longitude(bits):
 def insert_data_into_db(mac_address, latitude, longitude, altitude, height):
     try:
         connection = mysql.connector.connect(
-            host="192.168.54.206",
-            user="root",
-            password="1234",
-            database="dronescanner"
+            host="192.168.54.206",  #  needs to be changes according to raspberry pi ip
+            user="root",  #  needs to be changes according to raspberry pi database credentials
+            password="1234",  #  needs to be changes according to raspberry pi database credentials password
+            database="dronescanner"  #  needs to be changes according to raspberry pi database  name
         )
 
         cursor = connection.cursor()
 
-        # Define the SQL query to insert data
+        # Define the SQL query to insert data and 
+         # to be changes according to raspberry pi database table name istead of informationdrone
         sql = "INSERT INTO informationdrone (MacAddress, Latitude, Longitude, Altitude, Height, dateandtime) VALUES (%s, %s, %s, %s, %s, NOW())"
 
         # Data to be inserted
